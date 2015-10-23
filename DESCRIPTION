@@ -1,0 +1,14 @@
+Package: DTRlearn
+Type: Package
+Title: Learning Algorithms for Dynamic Treatment Regimes
+Version: 1.0
+Date: 2015-10-07
+Author: Ying Liu
+Maintainer: Ying Liu <yl2802@cumc.columbia.edu>
+Depends: kernlab,MASS,glmnet,ggplot2
+Description: Dynamic treatment regimens (DTRs) are sequential decision rules tailored at each stage by potentially time-varying patient features and intermediate outcomes observed in previous stages. There are 3 main type methods, O-learning, Q-learning and P-learning to learn the optimal Dynamic Treatment Regimes with continuous variables. This package provide these state of arts algorithms to learn DTRs.
+License: GPL-2
+Packaged: 2015-10-23 18:50:59 UTC; summer
+NeedsCompilation: no
+Repository: CRAN
+Date/Publication: 2015-10-23 21:29:17
