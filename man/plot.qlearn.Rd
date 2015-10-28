@@ -4,33 +4,22 @@
 \title{Plot the linear coefficients of interaction
 }
 \description{
-Plot the standardized coefficients from linear regression, i.e. it devides the coefficients for a  selected set of variables by the L2 norm.
+The function plots the standardized coefficients from linear regression, i.e. it divides the coefficients for a  selected set of variables by the L2 norm.
 }
 \usage{
-## S3 method for class 'qlearn'
 \method{plot}{qlearn}(x, index = NULL, names = NULL, 
 ylab = "std coefficients", xlab = "", col = "gray", ...)
 %\method{plot}{qlearn}(model)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-Single stage  Qlearning model of class \code{qlearn}
-}
-  \item{index}{
-is the vector of indexes of variables to plot.
-}
-  \item{names}{
-is the vector of names of each variables to appear in the plot. If not specified, the names would be V1-Vp
-}
-  \item{ylab}{
-The label for y yaxis.defalt is "std coefficients"
-}
-  \item{xlab}{
-The label for x yaxis.
-}
-  \item{col}{
-color to fill the bars in the plot.}
+  \item{x}{a model of class \code{'qlearn'}.}
+  \item{index}{is the vector of indices of variables to plot.}
+  \item{names}{is the vector of names of each variables to appear in the plot. If not specified, the names would be V1-Vp.}
+  \item{ylab}{The label for the y axis. Defalt is "std coefficients".}
+  \item{xlab}{The label for the x axis.}
+  
+  \item{col}{color to fill the bars in the plot.}
 
 \item{...}{further arguments passed to or from other methods.}
 }

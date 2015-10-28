@@ -5,19 +5,19 @@
 Q-learning 
 }
 \description{
-This funciton impletment multiple stage Q-learning through backward propogation.
+This funciton impletment multiple stage Q-learning.
 }
 \usage{
 Qlearning(X,AA,RR,K,pentype="lasso",m=4)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
- \item{X}{is either a matrix share among different stages, or list of feature matrix, row is sample, feature matrix of different stages can have different dimensions.}
-  \item{AA}{List of K, \code{A[[i]]} is the treatment assignment vector for stage i.}
-  \item{RR}{List of K, \code{R[[i]]} is the outcome vector for stage i.}
+ \item{X}{is either a matrix shared among all stages; or a list of feature matrices, where feature matrices from different stages can have different dimensions.}
+  \item{AA}{a list of K, each element \code{A[[i]]} is the vector of treatment assignments  for stage i.}
+  \item{RR}{a list of K, each element \code{R[[i]]} is the outcome vector for stage i.}
   \item{K}{number of stages}
-  \item{pentype}{The type of regression implement in Q-learning, default is 'lasso', can be set to 'LSE'}
-  \item{m}{number of folds of cross validation for in \code{\link{cv.glmnet}} in regression model if \code{'lasso'} is selected}
+  \item{pentype}{the type of regression implemented in Q-learning, the default is 'lasso', another choice is 'LSE'}
+  \item{m}{number of folds of cross validation for in \code{\link[glmnet]{cv.glmnet}} in regression model when \code{'lasso'} is selected}
 %%     ~~Describe \code{pentype} here~~
 }
 

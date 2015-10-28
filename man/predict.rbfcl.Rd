@@ -5,21 +5,21 @@
 Predict
 }
 \description{
-predict the best treatment for model with class 'linearcl' produced by \code{\link{wsvm}} with rbf kernel
+It  predicts the optimal treatments with model of class \code{'rbfcl'}, which is estimated by \code{\link{wsvm}} with \code{'rbf'} kernel.
 }
 \usage{
-## S3 method for class 'rbfcl'
+%## S3 method for class 'rbfcl'
 \method{predict}{rbfcl}(object, x,...)
 }
 %- maybe also 'usage' for other objects documented here.
  \arguments{
   \item{object}{model of class 'rbfcl'}
-  \item{x}{a matrix of feature varaibles, n by p}
+  \item{x}{a matrix of feature variables, n by p, p is the dimension of feature variables}
   \item{...}{further arguments passed to or from other methods.}
 }
 
 \value{
-a vector of optimal treatment for each row of x
+a vector of optimal treatments, each entry is for a row in x, the matrix of new feature variables.
 }
 
 \author{

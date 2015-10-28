@@ -5,27 +5,24 @@
 Predict
 }
 \description{
-predict the best treatment for model with class 'linearcl' produced by \code{\link{wsvm}} with linear kernel
+This function predicts the optimal treatments with model of class \code{'linearcl'}, which is estimated by \code{\link{wsvm}} with \code{'linear'} kernel.
 }
 \usage{
-## S3 method for class 'linearcl'
 \method{predict}{linearcl}(object, x,...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{object}{model of class \code{'linearcl'}}
-  \item{x}{a matrix of feature varaibles, n by p}
+  \item{x}{a matrix of feature variables, n by p}
   \item{...}{further arguments passed to or from other methods.}
 }
 
 \value{
-a vector of optimal treatment for each row of x
+a vector of optimal treatments, each entry is for a row in x, the matrix of new feature variables.
 }
 
 \author{
 Ying Liu 
-yl2802@cumc.columbia.edu  
-\url{http://www.columbia.edu/~yl2802/}
 }
 
 

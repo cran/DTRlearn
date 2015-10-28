@@ -5,20 +5,20 @@
 Predict optimal treatment by Qlearning
 }
 \description{
-This is function to predict optimal treatment for given Q-learning model of class \code{qlearn} and feature variable x
+This function predicts optimal treatments for a given Q-learning model of class \code{'qlearn'}.
 }
 \usage{
-## S3 method for class 'qlearn'
+%## S3 method for class 'qlearn'
 \method{predict}{qlearn}(object, x,...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{object}{with class 'qlearn'}
-   \item{x}{a matrix of feature varaibles,has p colunms, p dimensions of feature variables}
+  \item{object}{ a model with class 'qlearn'}
+   \item{x}{a matrix of feature variables,has p columns that is p dimensions of feature variables}
    \item{...}{further arguments passed to or from other methods.}
 }
 \value{
-a vector of optimal treatment for each row of x
+a vector of optimal treatments, each entry is for a row in x, the matrix of new feature variables.
 }
 
 \author{

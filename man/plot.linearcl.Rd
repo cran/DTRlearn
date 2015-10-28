@@ -1,11 +1,10 @@
 \name{plot.linearcl}
 \alias{plot.linearcl}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Plot the linear coefficients}
+\title{Plot coefficients for SVM with linear kernel}
 \description{
-Plot the standardized coefficients from SVM with linear kernel, i.e. it devides the coefficients for a  selected set of variables by the L2 norm.}
+The function visualize the contribution of each feature variable by plotting a selected subset of standardized coefficients from SVM with linear kernel, the coefficients are standardized dividing by the L2 norm of the subvector.}
 \usage{
-## S3 method for class 'linearcl'
 \method{plot}{linearcl}(x, index = NULL, names = NULL,
 ylab = "std coefficients", xlab = "", col = "gray",...)
 %\method{plot}{linearcl}(model, \dots)
@@ -13,19 +12,19 @@ ylab = "std coefficients", xlab = "", col = "gray",...)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{
-Single stage Olearning model with SVM classifier and linear kernel with class \code{'linearcl'}
+a model with class \code{'linearcl'}.
 }
    \item{index}{
-is the vector of indexes of variables to plot.
+is the vector of indices of variables to plot.
 }
   \item{names}{
-is the vector of names of each variables to appear in the plot. If not specified, the names would be V1-Vp
+is the vector of names of each variables to appear in the plot. If not specified, the names would be V1-Vp.
 }
   \item{ylab}{
-The label for y yaxis.
+The label for the y axis. Defalt is "std coefficients".
 }
   \item{xlab}{
-The label for x yaxis.
+The label for the x axis.
 }
   \item{col}{
 color to fill the bars in the plot.
@@ -41,7 +40,7 @@ Ying Liu  yl2802@cumc.columbia.edu
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-\code{\link{Olearning_Single}}
+\code{\link{Olearning_Single}}; \code{\link{wsvm}}
 }
 \examples{
 n=200

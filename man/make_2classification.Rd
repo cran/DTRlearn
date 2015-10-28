@@ -5,7 +5,7 @@
 Data Simulation for 2 stages
 }
 \description{
-It gives simulated data.
+It generates simulated dataset to test multiple stage learning algorithms.
 The outcomes are generated based on a pattern mixture model using a latent variable with 4 categories.  For each category, X has a multivariate normal distribution and each category is assigned a vector of optimal treatments V.
 Specifically, we generate centroids of the classes from a multivariate normal distribution mean 0 and std 5. We add the centroids to the first pinfo dimension of the vectors of feature variables X simulated from multivariate normal distribution with \code{pinfo}+\code{pnoise} dimensions. 
 
@@ -17,28 +17,28 @@ make_2classification(n_cluster, pinfo, pnoise, n_sample, centroids = 0)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
  \item{n_cluster}{
-number of cluster.
+number of clusters.
 }
   \item{pinfo}{
-number of infomative variables, dimentions of the centroids related to the latent class of the sample.
+number of informative variables, dimensions of the centroids related to the latent class of the sample.
 }
   \item{pnoise}{
 number of noise variable.
 }
   \item{n_sample}{
-number of sample to generate
+sample size
 }
   \item{centroids}{
-For a training set, donot assign centroids, this value is generated randomly by the function. For a testing set, one want to assign the same set of centroids as the training set. it is a matrix of dimention n_cluster by p. 
+For a training set, do not assign centroids, the centroids are generated randomly by the function. For a testing set, ones want to assign the same set of centroids as the training set. It is a matrix of dimension n_cluster by p. 
 }
 }
 
 \value{
 \item{X}{Feature variable matrix, it is a n_sample by pinfo+pnoise matrix generated from multivariate normal distribution. Where the noises are with mean 0 and std 1. The informative variables are shifted to centered at the randomly generate centroids. }
 \item{A}{List of 2, \code{A[[1]]} and \code{A[[2]]} are the treatment assignment vectors for stage 1 and 2.}
-\item{y}{List of 2, \code{y[[1]]} and \code{y[[2]]} are the true optimal treatment for stage 1 and 2}
-\item{R}{List of 2, \code{R[[1]]} is vector of \code{n_sample} zeros, \code{R[[2]]} is the final outcomes vector}
-\item{centroids}{centers of each cluster, are from pinfo dimentional multivariate normal distribution. }
+\item{y}{List of 2, \code{y[[1]]} and \code{y[[2]]} are the true optimal treatment vectors for stage 1 and 2}
+\item{R}{List of 2, \code{R[[1]]} is vector of \code{n_sample} zeros (this is the simplified case where the intermediate outcomes are 0), \code{R[[2]]} is the final outcomes vector}
+\item{centroids}{centers of each cluster, are from pinfo dimensional multivariate normal distribution. }
 }
 
 
